@@ -63,11 +63,11 @@
 				var msg = document.getElementById('isExist');
 				if(responseInfo === 'Success'){
 					msg.classList.add('OKMsg');
-					msg.innerText = 'success! 3 seconds to jump';
+					msg.innerText = 'The user name has not been used';
 				}
 				else if(responseInfo === 'Fail'){
 					msg.classList.add('FailMsg');
-					msg.innerText = 'VerFail!';
+					msg.innerText = 'The user name is already in use';
 				}
 			}
 		}

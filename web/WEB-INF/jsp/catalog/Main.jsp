@@ -13,7 +13,7 @@
         width: 250px;
         height: 230px;
         text-align: center;
-        background-color: aquamarine;
+        background-color: #666666;
         font-size: 20px;
         position: absolute;
         display: none;

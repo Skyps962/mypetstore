@@ -62,11 +62,10 @@
 		</tr>
 
 		<tr>
-			<td colspan=2><input type="checkbox" name="shippingAddressRequired" id="shippingAddressRequired">
+			<td colspan=2><input type="checkbox" name="shippingAddressRequired" id="shippingAddressRequired" onclick="next()">
 			Ship to different address...</td>
 		</tr>
 	</table>
-		<input type="button" name="newOrder" value="Next" onclick="next()">
 		</form>
 	</div>
 
@@ -111,7 +110,6 @@
 					<td><input type="text" name="order.shipCountry"></td>
 				</tr>
 			</table>
-			<input type="button" value="Back" onclick="back()">
 			<input type="button" name="newOrder" value="Continue" onclick="continue1()">
 		</form>
 	</div>
@@ -121,16 +119,13 @@
 	var Cata1 = document.getElementById("Catalog1");
 	var Cata2 = document.getElementById("Catalog2");
 	function next(){
-		if(!document.getElementById('shippingAddressRequired').checked)
-		document.getElementById('1').submit();
-		Cata1.style.display = "none";
+		if(document.getElementById('shippingAddressRequired').checked)
 		Cata2.style.display = "block";
-	}
-	function back(){
-		Cata2.style.display = "none";
-		Cata1.style.display = "block";
+		else
+			Cata2.style.display = "none";
 	}
 	function continue1(){
+		document.getElementById('1').submit();
 		document.getElementById('2').submit();
 	}
 </script>

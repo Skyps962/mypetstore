@@ -53,9 +53,8 @@
 			</tr>
 		</c:forEach>
 		<tr>
-			<td colspan="7">Sub Total: <fmt:formatNumber
+			<td colspan="7" id="222">Sub Total: <fmt:formatNumber
 				value="${sessionScope.cart.subTotal}" pattern="$#,##0.00" />
-				<input type="submit" value="Update Cart"/>
 			</td>
 			<td>&nbsp</td>
 		</tr>
@@ -68,6 +67,7 @@
 			var total = num * listPrice;
 			pretotal = total;
 			document.getElementById("111").innerText = "$" + total.toFixed(2);
+			document.getElementById("222").innerText = "Sub Total: " + "$" + total.toFixed(2);
 		}
 	</script>
 
